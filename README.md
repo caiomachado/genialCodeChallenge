@@ -15,6 +15,8 @@ For this project I used 3 dependencies:
 
 - Material UI: I also used Material UI for some of the styling in the application.
 
+- React Testing Library: I used React Testing Library for testing due to its practicality.
+
 ## How to run the project
 
 To run this project, you must first install all the dependencies with:
