@@ -6,7 +6,7 @@ type DivProps = {
   stepsLength: number;
 }
 
-export const ProgressBar: React.FC<DivProps> = ({ currentItem , stepsLength }) => {
+export const ProgressBar = ({ currentItem , stepsLength }: DivProps) => {
   return (
     <Container currentItem={currentItem} stepsLength={stepsLength}>
       <div className="bar"></div>

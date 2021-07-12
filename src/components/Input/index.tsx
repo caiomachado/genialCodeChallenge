@@ -14,12 +14,13 @@ type InputProps = {
   infoText?: string;
   infoList?: string[];
   inputType: string;
+  validateType: string;
   handleChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   verified: boolean;
-  toVerify: (e: string) => void;
+  toVerify: (value: string, type: string) => void;
 }
 
-export const Input: React.FC<InputProps> = ({
+export const Input = ({
   value,
   labelText,
   placeholderText,
@@ -27,15 +28,16 @@ export const Input: React.FC<InputProps> = ({
   infoTitle,
   infoList,
   inputType,
+  validateType,
   handleChange,
   verified,
   toVerify
-}) => {
+}: InputProps) => {
   const [isFocused, setIsFocused] = useState(false);
 
   useEffect(() => {
-    toVerify(value)
-  }, [value, toVerify])
+    toVerify(value, validateType)
+  }, [value, toVerify, validateType])
   
   return (
     <Container>
@@ -45,7 +47,7 @@ export const Input: React.FC<InputProps> = ({
           <p>{infoText}</p>
         </div>
       )}
-      <div className="input-block">
+      <div className={!verified && isFocused && value !== "" ? 'input-block error' : "input-block"}>
         <label className={value !== "" ? "input-filled" : ""}>{labelText}</label>
         {isFocused && inputType === "tel" && (
           <div className="dropdown-wrapper">
@@ -68,6 +70,7 @@ export const Input: React.FC<InputProps> = ({
           onChange={handleChange}
           onFocus={() => setIsFocused(true)}
           onBlur={() => setIsFocused(false)}
+          data-testid="input-test"
         />
       </div>
       {infoList && 

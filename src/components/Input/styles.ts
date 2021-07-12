@@ -102,6 +102,13 @@ export const Container = styled.div`
       }
     }
 
+    &.error {
+      &::after {
+        background-color: red;
+        transform: translateX(0);
+      }
+    }
+
     .dropdown-wrapper {
       display: flex;
       align-items: center;

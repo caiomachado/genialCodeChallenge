@@ -104,73 +104,7 @@ export const Container = styled.div`
         color: #050922;
       }
     }
-
-    .photo-step-information {
-      padding-right: 40px;
-      margin-bottom: 56px;
-
-      h1 {
-        font-size: 18px;
-        color: #050922;
-      }
-
-      p {
-        font-size: 14px;
-        color: #050922;
-      }
-    }
-
-    .action-buttons {
-      .upload-button {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 16px 25px;
-        background-color: #050922;
-        border-radius: 8px;
-        width: 300px;
-        outline: none;
-        border: 0;
-        transition: all 0.2s ease-in-out;
-        
-        &:not(:last-of-type) {
-          margin-bottom: 16px;
-        }
-
-        &:hover {
-          transform: scale(1.05);
-        }
-        
-        span {
-          color: #ffffff;
-          font-weight: 600;
-          
-          &.recommendation {
-            font-size: 14px;
-            font-weight: 400;
-            margin-left: 12px;
-          }
-        }
-      }
-    }
-
-    .register-later {
-      position: absolute;
-      bottom: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      text-align: center;
-      margin-bottom: 68px;
-      background: transparent;
-      color: #050922;
-      font-size: 14px;
-      font-weight: 600;
-      outline: none;
-      border: none;
-      text-transform: uppercase;
-      cursor: pointer;
-    }
-
+    
     .step-information {
       margin-bottom: 70px;
       padding-right: 40px;
@@ -185,49 +119,6 @@ export const Container = styled.div`
       p {
         color: #050922;
         font-size: 14px;
-      }
-    }
-  }
-
-  .next-block {
-    display: flex;
-    align-items: center;
-    padding-right: 40px;
-    margin-bottom: 24px;
-    position: absolute;
-    bottom: 0;
-
-    span {
-      font-size: 14px;
-      color: #050922;
-      font-weight: 600;
-      margin-right: 13px;
-
-      &.disabled {
-        opacity: 0.6;
-        cursor: not-allowed; 
-      }
-    }
-
-    .button-next {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background-color: #050922;
-      border-radius: 50%;
-      width: 40px;
-      height: 40px;
-      outline: none;
-      border: 0;
-      transition: all 0.2s ease-in-out;
-
-      &[disabled] {
-        opacity: 0.6;
-        cursor: not-allowed;
-      }
-
-      &:hover {
-        transform: scale(1.15);
       }
     }
   }

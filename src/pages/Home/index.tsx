@@ -24,7 +24,7 @@ const useStyles = makeStyles({
   }
 })
 
-export const Home: React.FC = () => {
+export const Home = () => {
   const history = useHistory();
   const classes = useStyles()
 

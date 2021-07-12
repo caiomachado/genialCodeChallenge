@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 import { LoadingScreen } from './components/LoadingScreen';
 import { Home } from './pages/Home';
-import { Register } from './pages/Register'
+import { Register }  from './pages/Register'
 
 import './global.css';
 
